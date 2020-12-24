@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -15,15 +16,20 @@ import frc.robot.RobotContainer;
 import frc.robot.Robot;
 
 public class Drivebase extends SubsystemBase {
-  public VictorSP left = new VictorSP(0);
-  public VictorSP right = new VictorSP(1);
-  public WPI_TalonSRX helo = new WPI_TalonSRX(2);
+  public VictorSP leftMaster = new VictorSP(0);
+  public VictorSP leftFollow = new VictorSP(1);
+  public VictorSP rightMaster = new VictorSP(2);
+  public WPI_VictorSPX rightFollow = new WPI_VictorSPX(3); 
+ // TODO: correct ports later
   public Drivebase() {
-    right.setInverted(true);
+    rightMaster.setInverted(true);
   }
   public void drive(double x,double y) {
-    left.set(x);
-    right.set(y);
+    leftMaster.set(x);
+    rightMaster.set(y);
+    leftFollow.set(x);
+    rightFollow.set(y);
+    // lmao yeet
   }
   @Override
   public void periodic() {
