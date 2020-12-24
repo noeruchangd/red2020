@@ -23,6 +23,7 @@ public class Drivebase extends SubsystemBase {
  // TODO: correct ports later
   public Drivebase() {
     rightMaster.setInverted(true);
+    rightFollow.setInverted(true);
   }
   public void drive(double x,double y) {
     leftMaster.set(x);
@@ -33,6 +34,6 @@ public class Drivebase extends SubsystemBase {
   }
   @Override
   public void periodic() {
-    drive(RobotContainer.stick.getRawAxis(1), RobotContainer.stick.getRawAxis(2));
+    drive(RobotContainer.stick.getRawAxis(1), RobotContainer.stick.getRawAxis(5));
   }
 }
