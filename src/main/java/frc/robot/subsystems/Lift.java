@@ -27,7 +27,6 @@ public class Lift extends SubsystemBase {
     };
   public void down(double lole){
     lift_1.setInverted(true);
-    // inverts output
     lift_1.set(lole);  
   }
   
@@ -41,5 +40,4 @@ public class Lift extends SubsystemBase {
     }
   }
 }
-// dit me vscode ngu vai lon
 

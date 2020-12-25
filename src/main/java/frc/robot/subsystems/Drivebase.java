@@ -16,24 +16,27 @@ import frc.robot.Robot;
 import static frc.robot.Constants.DRIVE_CONST.*;
 
 public class Drivebase extends SubsystemBase {
+
   public WPI_TalonSRX leftMaster = new WPI_TalonSRX(LEFT_MASTER_CAN);
   public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
   public WPI_TalonSRX rightMaster = new WPI_TalonSRX(RIGHT_MASTER_CAN);
   public WPI_VictorSPX rightFollow = new WPI_VictorSPX(RIGHT_FOLLOW_CAN); 
+ 
   public Drivebase() {
     rightMaster.setInverted(true);
     leftFollow.follow(leftMaster);
     rightFollow.follow(rightMaster);
   }
+  
   public void drive(double leftDrive,double rightDrive) {
     leftMaster.set(leftDrive);
     rightMaster.set(rightDrive);
-    // lmao yeet
   }
+
+
   @Override
   public void periodic() {
     drive(RobotContainer.stick.getRawAxis(1) * 0.5, RobotContainer.stick.getRawAxis(5) * 0.5);
   }
 }
-// dit me vscode ngu vai lon
 
