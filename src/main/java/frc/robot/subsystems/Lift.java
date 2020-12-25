@@ -29,7 +29,7 @@ public class Lift extends SubsystemBase {
     lift_1.setInverted(true);
     // inverts output
     lift_1.set(lole);  
-  };
+  }
   
   @Override
   public void periodic() {
