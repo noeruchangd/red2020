@@ -34,7 +34,7 @@ public class Grip extends SubsystemBase {
     if ((RobotContainer.stick.getRawButtonPressed(3))) {
       clampIn(0.8);
     }
-    if ((RobotContainer.stick.getRawButtonPressed(4))) {
+    if ((RobotContainer.stick.getRawButtonPressed(2))) {
       clampOut(0.8);
     }
   }
