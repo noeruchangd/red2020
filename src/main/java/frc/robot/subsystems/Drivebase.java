@@ -14,22 +14,21 @@ import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
 import frc.robot.Robot;
+import static frc.robot.Constants.DRIVE_CONST.*;
 
 public class Drivebase extends SubsystemBase {
-  public VictorSP leftMaster = new VictorSP(0);
-  public VictorSP leftFollow = new VictorSP(1);
-  public VictorSP rightMaster = new VictorSP(2);
-  public WPI_VictorSPX rightFollow = new WPI_VictorSPX(3); 
- // TODO: correct ports later
+  public WPI_TalonSRX leftMaster = new WPI_TalonSRX(LEFT_MASTER_CAN);
+  public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
+  public WPI_TalonSRX rightMaster = new WPI_TalonSRX(RIGHT_MASTER_CAN);
+  public WPI_VictorSPX rightFollow = new WPI_VictorSPX(RIGHT_FOLLOW_CAN); 
   public Drivebase() {
     rightMaster.setInverted(true);
-    rightFollow.setInverted(true);
+    leftFollow.follow(leftMaster);
+    rightFollow.follow(rightMaster);
   }
   public void drive(double x,double y) {
     leftMaster.set(x);
     rightMaster.set(y);
-    leftFollow.set(x);
-    rightFollow.set(y);
     // lmao yeet
   }
   @Override

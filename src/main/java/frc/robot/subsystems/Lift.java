@@ -14,27 +14,22 @@ import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
 import frc.robot.Robot;
+import static frc.robot.Constants.LIFT_CONST.*;
+
 
 public class Lift extends SubsystemBase {
-  public VictorSP lift_1 = new VictorSP(3);
-  public VictorSP lift_2 = new VictorSP(4);
- // TODO: correct ports later
+  public WPI_VictorSPX lift_1 = new WPI_VictorSPX(LIFT_LEFT);
+  public WPI_VictorSPX lift_2 = new WPI_VictorSPX(LIFT_RIGHT);
   public Lift() {
-    // nothing yo
+    lift_2.follow(lift_1);
     }
   public void up(double height) {
     lift_1.set(height);
-    lift_2.set(height);
-    // fuck pwm
-  };
+    };
   public void down(double lole){
     lift_1.setInverted(true);
-    lift_2.setInverted(true);
     // inverts output
-    lift_1.set(lole);
-    lift_2.set(lole);
-    // fuck pwm
-  };
+    lift_1.set(lole);  };
   
   @Override
   public void periodic() {
