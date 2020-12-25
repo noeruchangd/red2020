@@ -10,29 +10,33 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
+import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
 import frc.robot.Robot;
-import static frc.robot.Constants.DRIVE_CONST.*;
+import static frc.robot.Constants.CLAMP_CONST.*;
 
-public class Drivebase extends SubsystemBase {
-  public WPI_TalonSRX leftMaster = new WPI_TalonSRX(LEFT_MASTER_CAN);
-  public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
-  public WPI_TalonSRX rightMaster = new WPI_TalonSRX(RIGHT_MASTER_CAN);
-  public WPI_VictorSPX rightFollow = new WPI_VictorSPX(RIGHT_FOLLOW_CAN); 
-  public Drivebase() {
-    rightMaster.setInverted(true);
-    leftFollow.follow(leftMaster);
-    rightFollow.follow(rightMaster);
+public class Grip extends SubsystemBase {
+  public VictorSP clampMotor = new VictorSP(CLAMP_PWM);
+  public Grip() {
+    // nothing yo
   }
-  public void drive(double x,double y) {
-    leftMaster.set(x);
-    rightMaster.set(y);
-    // lmao yeet
+  public void clampIn(double inward) {
+    clampMotor.set(inward);
   }
+  public void clampOut(double outward) {
+    clampMotor.setInverted(true);
+    clampMotor.set(outward);
+  }
+
   @Override
   public void periodic() {
-    drive(RobotContainer.stick.getRawAxis(1) * 0.5, RobotContainer.stick.getRawAxis(5) * 0.5);
+    if ((RobotContainer.stick.getRawButtonPressed(3))) {
+      clampIn(0.8);
+    }
+    if ((RobotContainer.stick.getRawButtonPressed(4))) {
+      clampOut(0.8);
+    }
   }
 }
 // dit me vscode ngu vai lon

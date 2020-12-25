@@ -28,5 +28,9 @@ public final class Constants {
         LIFT_LEFT = 5,
         LIFT_RIGHT = 6;
     }
+    public static final class CLAMP_CONST {
+        public static final int
+        CLAMP_PWM = 1;
+    }
 }
-// TODO: correct numbers after tuner finished
+// TODO: correct numbers after tuner connected
