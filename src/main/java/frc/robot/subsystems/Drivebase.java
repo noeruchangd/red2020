@@ -25,9 +25,9 @@ public class Drivebase extends SubsystemBase {
     leftFollow.follow(leftMaster);
     rightFollow.follow(rightMaster);
   }
-  public void drive(double x,double y) {
-    leftMaster.set(x);
-    rightMaster.set(y);
+  public void drive(double leftDrive,double rightDrive) {
+    leftMaster.set(leftDrive);
+    rightMaster.set(rightDrive);
     // lmao yeet
   }
   @Override
