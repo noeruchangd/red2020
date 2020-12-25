@@ -21,9 +21,9 @@ public final class Constants {
     public static final class DRIVE_CONST {
         public static final int
         LEFT_MASTER_CAN = 1,
-        LEFT_FOLLOW_CAN = 2,
-        RIGHT_MASTER_CAN = 3,
-        RIGHT_FOLLOW_CAN = 4;
+        LEFT_FOLLOW_CAN = 4,
+        RIGHT_MASTER_CAN = 2,
+        RIGHT_FOLLOW_CAN = 3;
     }
     public static final class LIFT_CONST {
         public static final int
