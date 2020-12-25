@@ -20,7 +20,7 @@ public class Drivebase extends SubsystemBase {
   public WPI_TalonSRX leftMaster = new WPI_TalonSRX(LEFT_MASTER_CAN);
   public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
   public WPI_TalonSRX rightMaster = new WPI_TalonSRX(RIGHT_MASTER_CAN);
-  public WPI_TalonSRX rightFollow = new WPI_TalonSRX(RIGHT_FOLLOW_CAN); 
+  public WPI_VictorSPX rightFollow = new WPI_VictorSPX(RIGHT_FOLLOW_CAN); 
  
   public Drivebase() {
     rightMaster.setInverted(true);
