@@ -35,4 +35,3 @@ public final class Constants {
         CLAMP_PWM = 1;
     }
 }
-// TODO: correct numbers after tuner connected
