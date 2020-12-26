@@ -32,12 +32,8 @@ public class Lift extends SubsystemBase {
   
   @Override
   public void periodic() {
-    if ((RobotContainer.stick.getRawAxis(2) != 0)) {
       up(RobotContainer.stick.getRawAxis(2));
-    }
-    else {
       down(RobotContainer.stick.getRawAxis(3));
     }
   }
-}
 
