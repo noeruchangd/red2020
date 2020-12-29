@@ -27,8 +27,7 @@ public final class Constants {
     }
     public static final class LIFT_CONST {
         public static final int
-        LIFT_LEFT_CAN = 5,
-        LIFT_RIGHT_CAN = 6;
+        LIFT_CAN = 5;
     }
     public static final class CLAMP_CONST {
         public static final int

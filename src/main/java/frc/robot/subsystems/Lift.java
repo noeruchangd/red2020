@@ -17,10 +17,9 @@ import static frc.robot.Constants.LIFT_CONST.*;
 
 
 public class Lift extends SubsystemBase {
-  public WPI_VictorSPX lift_1 = new WPI_VictorSPX(LIFT_LEFT_CAN);
-  public WPI_VictorSPX lift_2 = new WPI_VictorSPX(LIFT_RIGHT_CAN);
+  public WPI_VictorSPX lift_1 = new WPI_VictorSPX(LIFT_CAN);
   public Lift() {
-    lift_2.follow(lift_1);
+    //nothing
     }
   public void up(double height) {
     lift_1.set(height);
