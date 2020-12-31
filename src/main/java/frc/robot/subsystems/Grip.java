@@ -17,7 +17,7 @@ import frc.robot.Robot;
 import static frc.robot.Constants.CLAMP_CONST.*;
 
 public class Grip extends SubsystemBase {
-  public VictorSP clampMotor = new VictorSP(CLAMP_PWM);
+  public WPI_VictorSPX clampMotor = new WPI_VictorSPX(CLAMP_CAN);
   public Grip() {
     // nothing yo
   }

@@ -31,6 +31,6 @@ public final class Constants {
     }
     public static final class CLAMP_CONST {
         public static final int
-        CLAMP_PWM = 1;
+        CLAMP_CAN = 6;
     }
 }
