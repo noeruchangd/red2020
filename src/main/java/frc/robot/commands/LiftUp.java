@@ -7,38 +7,35 @@
 
 package frc.robot.commands;
 
-
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.subsystems.Drivebase;
+import frc.robot.subsystems.Lift;
 
-public class StraightDrive extends CommandBase {
-  private static Drivebase db;
+public class LiftUp extends CommandBase {
+  private static Lift buoi;
   /**
-   * Creates a new StraightDrive.
- *
+   * Creates a new LiftUp.
    */
-  public StraightDrive(Drivebase driver) {
-
-    addRequirements(driver);
+  public LiftUp(Lift lon) {
     // Use addRequirements() here to declare subsystem dependencies.
-    db = driver; // bu cac
+    addRequirements(lon);
+    buoi = lon;
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-     db.drive(0.6, 0.6);
-           Timer.delay(3);
-     db.drive(0, 0);
-           Timer.delay(0.6);
-     db.drive(0.6, -0.6);
+    buoi.up(0.8);
+    Timer.delay(0.5);
+    buoi.up(0);
+    buoi.down(0.8);
+    Timer.delay(0.5);
+    buoi.down(0);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-
   }
 
   // Called once the command ends or is interrupted.

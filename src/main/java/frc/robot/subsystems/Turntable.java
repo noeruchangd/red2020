@@ -10,6 +10,7 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
+import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
 import frc.robot.Robot;
@@ -17,22 +18,22 @@ import static frc.robot.Constants.LIFT_CONST.*;
 
 
 public class Turntable extends SubsystemBase {
-  public WPI_VictorSPX lift_1 = new WPI_VictorSPX(LIFT_CAN);
+  public VictorSP quay = new VictorSP(LIFT_CAN);
   public Turntable() {
     //nothing
     }
-  public void up(double height) {
-    lift_1.set(height);
+  public void cock(double spin) {
+    quay.set(spin);
     };
-  public void down(double lole){
-    lift_1.setInverted(true);
-    lift_1.set(lole);  
+  public void counterCock(double lole){
+    quay.setInverted(true);
+    quay.set(lole);  
   }
   
   @Override
   public void periodic() {
-      up(RobotContainer.stick.getRawAxis(2));
-      down(RobotContainer.stick.getRawAxis(3));
+      cock(RobotContainer.stick.getRawAxis(2));
+      counterCock(RobotContainer.stick.getRawAxis(3));
     }
   }
 
