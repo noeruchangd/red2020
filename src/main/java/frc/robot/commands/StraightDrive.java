@@ -28,17 +28,17 @@ public class StraightDrive extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-
-  }
-
-  // Called every time the scheduler runs while the command is scheduled.
-  @Override
-  public void execute() {
     db.drive(0.6, 0.6);
           Timer.delay(3);
     db.drive(0, 0);
           Timer.delay(0.6);
     db.drive(0.6, -0.6);
+  }
+
+  // Called every time the scheduler runs while the command is scheduled.
+  @Override
+  public void execute() {
+
   }
 
   // Called once the command ends or is interrupted.
