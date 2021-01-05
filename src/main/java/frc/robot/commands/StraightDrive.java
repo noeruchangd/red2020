@@ -7,28 +7,34 @@
 
 package frc.robot.commands;
 
+
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Drivebase;
 
 public class StraightDrive extends CommandBase {
+  private static Drivebase db;
   /**
    * Creates a new StraightDrive.
  * @param drive
    */
   public StraightDrive(Drivebase driver) {
+
     addRequirements(driver);
     // Use addRequirements() here to declare subsystem dependencies.
+    db = driver; // bu cac
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    
+
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
+    db.leftMaster.set(0.6);
+    db.rightMaster.set(0.6);
   }
 
   // Called once the command ends or is interrupted.
