@@ -11,12 +11,12 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Lift;
 
-public class LiftUp extends CommandBase {
+public class LiftAuto extends CommandBase {
   private static Lift buoi;
   /**
    * Creates a new LiftUp.
    */
-  public LiftUp(Lift lon) {
+  public LiftAuto(Lift lon) {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(lon);
     buoi = lon;

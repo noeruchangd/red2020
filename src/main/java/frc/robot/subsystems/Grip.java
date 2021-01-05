@@ -25,8 +25,7 @@ public class Grip extends SubsystemBase {
     clampMotor.set(inward);
   }
   public void clampOut(double outward) {
-    clampMotor.setInverted(true);
-    clampMotor.set(outward);
+    clampMotor.set(-outward);
   }
 
   @Override

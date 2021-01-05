@@ -20,13 +20,13 @@ public class Lift extends SubsystemBase {
   public WPI_VictorSPX lift_1 = new WPI_VictorSPX(LIFT_CAN);
   public Lift() {
     //nothing
-    }
+  }
   public void up(double height) {
     lift_1.set(height);
-    };
+  };
+
   public void down(double lole){
-    lift_1.setInverted(true);
-    lift_1.set(lole);  
+    lift_1.set(-lole);  
   }
   
   @Override

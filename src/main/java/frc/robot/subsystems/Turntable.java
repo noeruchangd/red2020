@@ -25,9 +25,8 @@ public class Turntable extends SubsystemBase {
   public void cock(double spin) {
     quay.set(spin);
     };
-  public void counterCock(double lole){
-    quay.setInverted(true);
-    quay.set(lole);  
+  public void counterCock(double cock){
+    quay.set(-cock);  
   }
   
   @Override

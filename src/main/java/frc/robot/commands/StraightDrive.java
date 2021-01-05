@@ -19,7 +19,7 @@ public class StraightDrive extends CommandBase {
  *
    */
   public StraightDrive(Drivebase driver) {
-
+    
     addRequirements(driver);
     // Use addRequirements() here to declare subsystem dependencies.
     db = driver; // bu cac
