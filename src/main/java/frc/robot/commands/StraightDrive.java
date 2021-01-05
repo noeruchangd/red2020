@@ -35,9 +35,9 @@ public class StraightDrive extends CommandBase {
   @Override
   public void execute() {
     db.drive(0.6, 0.6);
-    Timer.delay(3);
+          Timer.delay(3);
     db.drive(0, 0);
-    Timer.delay(0.6);
+          Timer.delay(0.6);
     db.drive(0.6, -0.6);
   }
 
