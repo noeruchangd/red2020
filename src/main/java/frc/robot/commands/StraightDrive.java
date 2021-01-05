@@ -37,6 +37,8 @@ public class StraightDrive extends CommandBase {
     db.drive(0.6, 0.6);
     Timer.delay(3);
     db.drive(0, 0);
+    Timer.delay(0.6);
+    db.drive(0.6, -0.6);
   }
 
   // Called once the command ends or is interrupted.
