@@ -32,7 +32,10 @@ public class Drivebase extends SubsystemBase {
     leftMaster.set(leftDrive);
     rightMaster.set(rightDrive);
   }
-
+  public void rotate(double speed) {
+    leftMaster.set(speed);
+    rightMaster.set(-speed);
+  }
 
   @Override
   public void periodic() {

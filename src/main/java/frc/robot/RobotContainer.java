@@ -11,6 +11,8 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.commands.Auto;
+import frc.robot.commands.LiftAuto;
 import frc.robot.commands.StraightDrive;
 import frc.robot.subsystems.Drivebase;
 import frc.robot.subsystems.Lift;
@@ -29,6 +31,8 @@ public class RobotContainer {
   private final Lift lift = new Lift();
   private final Grip grip = new Grip();
   private final StraightDrive sdrive = new StraightDrive(driver);
+  private final LiftAuto liftauto = new LiftAuto(lift);
+  private final Auto auto = new Auto(driver, lift);
 
   public static Joystick stick = new Joystick(0);
 
@@ -57,6 +61,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
-    return sdrive;
+    return auto;
   }
 }

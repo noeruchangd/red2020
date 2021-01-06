@@ -18,7 +18,7 @@ public class StraightDrive extends CommandBase {
    * Creates a new StraightDrive.
  *
    */
-  public StraightDrive(Drivebase driver) {
+  public StraightDrive(Drivebase driver){
     
     addRequirements(driver);
     // Use addRequirements() here to declare subsystem dependencies.
@@ -28,11 +28,9 @@ public class StraightDrive extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
+     db.rotate(0.6);
+     Timer.delay(1);
      db.drive(0.6, 0.6);
-           Timer.delay(3);
-     db.drive(0, 0);
-           Timer.delay(0.6);
-     db.drive(0.6, -0.6);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
