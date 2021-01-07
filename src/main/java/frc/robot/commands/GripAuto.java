@@ -9,29 +9,29 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.subsystems.Lift;
+import frc.robot.subsystems.Grip;
 
-public class LiftAuto extends CommandBase {
-  private static Lift buoi;
+public class GripAuto extends CommandBase {
+  private static Grip latkeo;
   /**
-   * Creates a new LiftUp.
+   * Creates a new GripAuto.
    */
-  public LiftAuto(Lift lon) {
+  public GripAuto(Grip win) {
+    addRequirements(win);
+    latkeo =  win;
     // Use addRequirements() here to declare subsystem dependencies.
-    addRequirements(lon);
-    buoi = lon;
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    buoi.up(0.8);
-    Timer.delay(0.5);
-    buoi.up(0);
-    Timer.delay(0.5);
-    buoi.down(0.8);
-    Timer.delay(0.5);
-    buoi.down(0);
+    latkeo.clampIn(0.5);
+    Timer.delay(1);
+    latkeo.clampIn(0);
+    Timer.delay(1);
+    latkeo.clampOut(0.5);
+    Timer.delay(1);
+
   }
 
   // Called every time the scheduler runs while the command is scheduled.
