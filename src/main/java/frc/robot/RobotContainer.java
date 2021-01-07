@@ -34,7 +34,7 @@ public class RobotContainer {
   private final LiftAuto liftauto = new LiftAuto(lift);
   private final Auto auto = new Auto(driver, lift);
 
-  public static Joystick stick = new Joystick(0);
+  public static Joystick stick = new Joystick(1);
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.

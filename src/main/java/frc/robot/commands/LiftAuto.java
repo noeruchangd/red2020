@@ -27,10 +27,6 @@ public class LiftAuto extends CommandBase {
   public void initialize() {
     buoi.up(0.8);
     Timer.delay(0.5);
-    buoi.up(0);
-    buoi.down(0.8);
-    Timer.delay(0.5);
-    buoi.down(0);
   }
 
   // Called every time the scheduler runs while the command is scheduled.

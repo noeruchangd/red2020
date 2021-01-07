@@ -22,15 +22,19 @@ public final class Constants {
         public static final int
         LEFT_MASTER_CAN = 1,
         LEFT_FOLLOW_CAN = 2,
-        RIGHT_MASTER_CAN = 3,
+        RIGHT_MASTER_CAN = 7,
         RIGHT_FOLLOW_CAN = 4;
     }
     public static final class LIFT_CONST {
         public static final int
-        LIFT_CAN = 5;
+        LIFT_CAN = 3;
     }
     public static final class CLAMP_CONST {
         public static final int
         CLAMP_CAN = 6;
+    }
+    public static final class TURN_CONST {
+        public static final int
+        TURNTABLE_PWM = 1;
     }
 }

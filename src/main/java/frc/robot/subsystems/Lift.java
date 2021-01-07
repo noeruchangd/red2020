@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -17,22 +18,16 @@ import static frc.robot.Constants.LIFT_CONST.*;
 
 
 public class Lift extends SubsystemBase {
-  public WPI_VictorSPX lift_1 = new WPI_VictorSPX(LIFT_CAN);
+  public WPI_TalonSRX lift_1 = new WPI_TalonSRX(LIFT_CAN);
   public Lift() {
     //nothing
   }
   public void up(double height) {
     lift_1.set(height);
-  };
-
-  public void down(double lole){
-    lift_1.set(-lole);  
-  }
-  
+  }; 
   @Override
   public void periodic() {
-      up(RobotContainer.stick.getRawAxis(2));
-      down(RobotContainer.stick.getRawAxis(3));
+      up(RobotContainer.stick.getRawAxis(2) * 0.5);
     }
   }
 

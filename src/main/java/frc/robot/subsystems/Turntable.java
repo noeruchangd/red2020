@@ -12,25 +12,20 @@ import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
 import frc.robot.Robot;
-import static frc.robot.Constants.LIFT_CONST.*;
+import static frc.robot.Constants.TURN_CONST.*;
 
 
 public class Turntable extends SubsystemBase {
-  public VictorSP quay = new VictorSP(LIFT_CAN);
+  public VictorSP quay = new VictorSP(TURNTABLE_PWM);
   public Turntable() {
     //nothing
     }
   public void cock(double spin) {
     quay.set(spin);
     };
-  public void counterCock(double cock){
-    quay.set(-cock);  
-  }
-  
   @Override
   public void periodic() {
-      cock(RobotContainer.stick.getRawAxis(2));
-      counterCock(RobotContainer.stick.getRawAxis(3));
+      cock(RobotContainer.stick.getRawAxis(0));
     }
   }
 
