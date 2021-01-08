@@ -24,10 +24,14 @@ public class Auto extends SequentialCommandGroup {
     
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
+<<<<<<< HEAD
   //   super(new Turn(bucac), new WaitCommand(0.1), new StraightDrive(bucac), new WaitCommand(0.1), new Turn(bucac), new WaitCommand(1), new StraightDrive(bucac), new WaitCommand(1), new GripAuto(kep), new WaitCommand(1), new LiftAuto(bulon), new WaitCommand(1),  
   //   new Turn(bucac), new StraightDrive(bucac), new Turn(bucac), new StraightDrive(bucac), new Turn(bucac), new StraightDrive(bucac), new LiftAuto(bulon), new GripAuto(kep),new WaitCommand(1),  
   //   new Turn(bucac), new StraightDrive(bucac), new Turn(bucac), new StraightDrive(bucac), new Turn(bucac), new StraightDrive(bucac), 
   //   new Turn(bucac), new StraightDrive(bucac), new WaitCommand(0.6),    );
        super(new GoStraightThenTurn(drive,90 ,123 ))
+=======
+    super(new StraightDrive(bucac), new WaitCommand(7), new LiftAuto(bulon));
+>>>>>>> 2e4049308be84aaeda5142953269a1d1e29c0cdb
   }
 }
