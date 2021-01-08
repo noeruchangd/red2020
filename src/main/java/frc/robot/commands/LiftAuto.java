@@ -12,22 +12,22 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Lift;
 
 public class LiftAuto extends CommandBase {
-  private static Lift buoi;
+  private static Lift lifter;
   /**
    * Creates a new LiftUp.
    */
   public LiftAuto(Lift lon) {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(lon);
-    buoi = lon;
+    lifter = lon;
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    buoi.up(0.8);
+    lifter.elevate(0.8);
     Timer.delay(0.5);
-    buoi.up(0);
+    lifter.elevate(0);
   }
 
   // Called every time the scheduler runs while the command is scheduled.

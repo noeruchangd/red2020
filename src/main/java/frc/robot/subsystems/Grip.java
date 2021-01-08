@@ -24,7 +24,7 @@ public class Grip extends SubsystemBase {
     clampMotor.set(inward);
   }
   public void clampOut(double outward) {
-    clampMotor.set(-outward);
+    clampMotor.set(outward);
   }
 
   @Override
@@ -33,9 +33,7 @@ public class Grip extends SubsystemBase {
       clampIn(0.8);
     }
     if ((RobotContainer.stick.getRawButtonPressed(2))) {
-      clampOut(0.8);
+      clampOut(-0.8);
     }
   }
 }
-// dit me vscode ngu vai lon
-

@@ -22,12 +22,12 @@ public class Lift extends SubsystemBase {
   public Lift() {
     //nothing
   }
-  public void up(double height) {
+  public void elevate(double height) {
     lift_1.set(height);
   }; 
   @Override
   public void periodic() {
-      up(RobotContainer.stick.getRawAxis(2) * 0.5);
+      elevate(RobotContainer.stick.getRawAxis(2) * 0.6);
     }
   }
 

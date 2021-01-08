@@ -26,6 +26,6 @@ public class Auto extends SequentialCommandGroup {
     
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
-    super(new StraightDrive(bucac), new WaitCommand(6.9), new LiftAuto(bulon));
+    super(new StraightDrive(bucac), new WaitCommand(7), new LiftAuto(bulon));
   }
 }
