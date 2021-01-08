@@ -7,40 +7,35 @@
 
 package frc.robot.commands;
 
-
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Drivebase;
 
-public class StraightDrive extends CommandBase {
-  private static Drivebase db;
-  private static final double MetersPerSecond = 1;
-  private double distance;
+public class Turn extends CommandBase {
+  private static Drivebase turn;
+  private double angle;
+  private static final double DegsPerSec = 30;
   /**
-   * Creates a new StraightDrive.
- *
+   * Creates a new Turn.
    */
-  public StraightDrive(Drivebase driver, double d){
-    
-    addRequirements(driver);
+  public Turn(Drivebase quay, double a) {
+    addRequirements(quay);
+    turn = quay;
+    angle = a;
     // Use addRequirements() here to declare subsystem dependencies.
-    db = driver; // bu cac
-    distance = d;
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-     //db.rotate(0.6);
-     //Timer.delay(1);
-     db.drive(0.6, 0.6);
-     Timer.delay(distance / MetersPerSecond);
+    turn.drive(0.6, -0.6);
+    Timer.delay(angle / DegsPerSec);
+    turn.drive(0, 0);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-
   }
 
   // Called once the command ends or is interrupted.
