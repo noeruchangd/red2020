@@ -28,10 +28,10 @@ public class Grip extends SubsystemBase {
   @Override
   public void periodic() {
    if (RobotContainer.stick.getRawButton(5)) {
-     clampIn(0.6);
+     clampIn(0.4);
   }
    else if (RobotContainer.stick.getRawButton(6)) {
-     clampIn(-0.6);
+     clampIn(-0.4);
   }
   else if ((RobotContainer.stick.getRawButton(5) & RobotContainer.stick.getRawButton(6)) == false) {
 clampIn(0);
