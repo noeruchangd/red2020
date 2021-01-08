@@ -30,7 +30,7 @@ public class RobotContainer {
   private final Drivebase driver = new Drivebase(); // vscode ngu bo me
   private final Lift lift = new Lift();
   private final Grip grip = new Grip();
-  private final StraightDrive sdrive = new StraightDrive(driver);
+ // private final StraightDrive sdrive = new StraightDrive(driver);
   private final Drivebase bucac = new Drivebase();
   private final Lift bulon = new Lift();
   private final Grip kep = new Grip();

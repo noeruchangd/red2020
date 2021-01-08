@@ -31,14 +31,9 @@ public class StraightDrive extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-<<<<<<< HEAD
-     //db.rotate(0.6);
-     //Timer.delay(1);
-=======
-     Timer.delay(1);
->>>>>>> 2e4049308be84aaeda5142953269a1d1e29c0cdb
      db.drive(0.6, 0.6);
      Timer.delay(distance / MetersPerSecond);
+     db.drive(0, 0);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
