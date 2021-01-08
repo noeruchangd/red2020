@@ -22,12 +22,12 @@ public final class Constants {
         public static final int
         LEFT_MASTER_CAN = 1,
         LEFT_FOLLOW_CAN = 2,
-        RIGHT_MASTER_CAN = 7,
+        RIGHT_MASTER_CAN = 3,
         RIGHT_FOLLOW_CAN = 4;
     }
     public static final class LIFT_CONST {
         public static final int
-        LIFT_CAN = 3;
+        LIFT_CAN = 5;
     }
     public static final class CLAMP_CONST {
         public static final int

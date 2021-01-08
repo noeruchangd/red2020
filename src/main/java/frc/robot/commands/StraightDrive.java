@@ -28,7 +28,6 @@ public class StraightDrive extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-     db.rotate(0.6);
      Timer.delay(1);
      db.drive(0.6, 0.6);
   }

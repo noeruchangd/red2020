@@ -29,7 +29,7 @@ public class GripAuto extends CommandBase {
     Timer.delay(1);
     latkeo.clampIn(0);
     Timer.delay(1);
-    latkeo.clampOut(0.5);
+    latkeo.clampIn(-0.5);
     Timer.delay(1);
 
   }
