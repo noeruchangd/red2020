@@ -14,12 +14,15 @@ import frc.robot.subsystems.Grip;
 
 public class GripIn extends CommandBase {
   private static Grip gr;
+  private double InWard;
+  
   /**
    * Creates a new GripIn.
    */
-  public GripIn(Grip a)  {
+  public GripIn(Grip a, double d)  {
     addRequirements(a);
     gr = a;
+    InWard = d;
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
@@ -27,7 +30,7 @@ public class GripIn extends CommandBase {
   @Override
   public void initialize() {
     gr.clampIn(0.5);
-    Timer.delay(0.1);
+    Timer.delay(InWard);
     gr.clampIn(0);
   }
 
