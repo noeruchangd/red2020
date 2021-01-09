@@ -13,12 +13,15 @@ import frc.robot.subsystems.Lift;
 
 public class LiftDown extends CommandBase {
   private static Lift xuong;
+  
+  private double Height;
   /**
    * Creates a new LiftDown.
    */
-  public LiftDown(Lift x) {
+  public LiftDown(Lift x, double n) {
     addRequirements(x);
     xuong = x;
+    Height = n;
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
@@ -26,7 +29,7 @@ public class LiftDown extends CommandBase {
   @Override
   public void initialize() {
     xuong.elevate(0.5);
-    Timer.delay(0.5);
+    Timer.delay(Height);
     xuong.elevate(0);
 
   }

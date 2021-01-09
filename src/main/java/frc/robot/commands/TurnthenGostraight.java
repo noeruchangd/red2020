@@ -15,11 +15,11 @@ import frc.robot.subsystems.Drivebase;
 // NOTE:  Consider using this command inline, rather than writing a subclass.  For more
 // information, see:
 // https://docs.wpilib.org/en/latest/docs/software/commandbased/convenience-features.html
-public class TurnthenGostraight extends SequentialCommandGroup {
+public class TurnThenGoStraight extends SequentialCommandGroup {
   /**
    * Creates a new GoStraightThenTurn.
    */
-  public TurnthenGostraight(Drivebase Ishar, double angle, double distance) {
+  public TurnThenGoStraight(Drivebase Ishar, double angle, double distance) {
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
     super(new Turn(Ishar, angle), new StraightDrive(Ishar, distance));

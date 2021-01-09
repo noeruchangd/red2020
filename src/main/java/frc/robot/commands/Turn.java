@@ -14,7 +14,7 @@ import frc.robot.subsystems.Drivebase;
 public class Turn extends CommandBase {
   private static Drivebase turn;
   private double angle;
-  private static final double DegsPerSec = 30;
+  private static final double DegsPerSec = 1;
   /**
    * Creates a new Turn.
    */

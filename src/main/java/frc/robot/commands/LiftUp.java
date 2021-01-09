@@ -13,20 +13,23 @@ import frc.robot.subsystems.Lift;
 
 public class LiftUp extends CommandBase {
   private static Lift len;
+
+  private double height;
   /**
    * Creates a new LiftUp.
    */
-  public LiftUp(Lift l) {
+  public LiftUp(Lift l, double m) {
     addRequirements(l);
     len = l;
+    height = m;
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    len.elevate(2);
-    Timer.delay(0.5);
+    len.elevate(2);;
+    Timer.delay(height);
     len.elevate(0);
   }
 
