@@ -36,7 +36,7 @@ public class RobotContainer {
   private final Lift bulon = new Lift();
   private final Grip kep = new Grip();
   private final Auto mAuto = new Auto(bucac, bulon, kep);
-  public static Joystick stick = new Joystick(0);
+  public static Joystick stick = new Joystick(1);
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.

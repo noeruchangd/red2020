@@ -27,7 +27,7 @@ public class Auto extends SequentialCommandGroup {
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
 
-      super(new TurnthenGostraight(drive, 45, 10),new TurnthenGostraight(drive, 135, 2), new TurnthenGostraight(drive, 45, 10), new LiftDown(lift), new GripOut(grip)); 
+      // super(new TurnthenGostraight(drive, 45, 10),new TurnthenGostraight(drive, 135, 2), new TurnthenGostraight(drive, 45, 10), new LiftDown(lift), new GripOut(grip)); 
       //  super(new GoStraightThenTurn(drive, 145 ,50 ), new GoStraightThenTurn(drive, angle, distance), 
       //  new GripIn(grip), new  GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance),
       //  new GripOut(grip), new GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance), new Turn(drive, a),

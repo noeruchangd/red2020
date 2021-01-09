@@ -14,9 +14,11 @@ import frc.robot.RobotContainer;
 import frc.robot.Robot;
 import static frc.robot.Constants.TURN_CONST.*;
 
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+
 
 public class Turntable extends SubsystemBase {
-  public VictorSP quay = new VictorSP(TURNTABLE_PWM);
+  public WPI_TalonSRX quay = new WPI_TalonSRX(TURNTABLE_CAN);
   public Turntable() {
     //nothing
     }
@@ -25,7 +27,7 @@ public class Turntable extends SubsystemBase {
     };
   @Override
   public void periodic() {
-      cock(RobotContainer.stick.getRawAxis(0));
-    }
+      cock(RobotContainer.stick.getRawAxis(0) * 0.5);
   }
+}
 
