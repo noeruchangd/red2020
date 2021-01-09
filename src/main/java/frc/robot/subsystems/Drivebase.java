@@ -25,13 +25,13 @@ public class Drivebase extends SubsystemBase {
   public Drivebase() {
     leftFollow.follow(leftMaster);
     rightFollow.follow(rightMaster);
+    leftMaster.setInverted(true);
+    leftFollow.setInverted(true);
   }
 
   public void drive(double leftDrive,double rightDrive) {
     leftMaster.set(leftDrive);
     rightMaster.set(rightDrive);
-    leftMaster.setInverted(true);
-    leftFollow.setInverted(true);
   }
 
   @Override

@@ -8,20 +8,17 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
-import edu.wpi.first.wpilibj2.command.WaitCommand;
-import frc.robot.subsystems.Drivebase;
-
-
+import frc.robot.subsystems.*;
 // NOTE:  Consider using this command inline, rather than writing a subclass.  For more
 // information, see:
 // https://docs.wpilib.org/en/latest/docs/software/commandbased/convenience-features.html
 public class TurnThenGoStraight extends SequentialCommandGroup {
   /**
-   * Creates a new GoStraightThenTurn.
+   * Creates a new TurnThenGoStraight.
    */
   public TurnThenGoStraight(Drivebase Ishar, double angle, double distance) {
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
-    super(new Turn(Ishar, angle), new StraightDrive(Ishar, distance));
+    super();
   }
 }

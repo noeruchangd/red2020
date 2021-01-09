@@ -27,9 +27,9 @@ public class Auto extends SequentialCommandGroup {
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
 
-      super(new TurnThenGoStraight(drive, 55, 8.1),new TurnThenGoStraight(drive, 125, 4.7), new TurnThenGoStraight(drive, 130, 8), 
-      new LiftDown(lift, 0.5), new GripOut(grip, 0.2), new TurnThenGoStraight(drive, 180, 8), new TurnThenGoStraight(drive, 130, 3.3), new TurnThenGoStraight(drive, 90, 1.5),
-      new GripIn(grip, x1), new LiftUp(lift, y1), new TurnThenGoStraight(drive, 180, 1.5), new TurnThenGoStraight(drive, 90, 3.3), new TurnThenGoStraight(drive, 135, 7),
+      super(
+        new StraightDrive(drive)
+      /*new GripIn(grip, x1), new LiftUp(lift, y1), new TurnThenGoStraight(drive, 180, 1.5), new TurnThenGoStraight(drive, 90, 3.3), new TurnThenGoStraight(drive, 135, 7),
       new LiftDown(lift, y1), new GripOut(grip, x1), new TurnThenGoStraight(drive, 180, 7), new TurnThenGoStraight(drive, 135, 3.3), new TurnThenGoStraight(drive, 90, 1.3),
       new LiftUp(lift, y2), new GripIn(grip, x2), new TurnThenGoStraight(drive, 180, 1.3), new TurnThenGoStraight(drive, 90, 3.3), new TurnThenGoStraight(drive, 140, 7.5),
       new LiftDown(lift, y2), new GripOut(grip, x2) ); 
@@ -42,6 +42,7 @@ public class Auto extends SequentialCommandGroup {
       //   new LiftDown(lift), new GripOut(grip),new  GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance),   )  ;
        }
   }*/
+      );
   }
 }
 

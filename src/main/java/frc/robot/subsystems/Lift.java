@@ -30,10 +30,10 @@ public class Lift extends SubsystemBase {
   @Override
   public void periodic() {
    if (RobotContainer.stick.getRawButton(1)){
-     elevate(-0.5);
+     elevate(-0.4);
     }
    if (RobotContainer.stick.getRawButton(3)) {
-     elevate(0.5);
+     elevate(0.4);
   }
   else if ((RobotContainer.stick.getRawButton(1) & RobotContainer.stick.getRawButton(1)) == false) 
 elevate(0);
