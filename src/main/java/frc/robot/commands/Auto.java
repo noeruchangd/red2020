@@ -8,7 +8,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
-
+import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.subsystems.Drivebase;
 import frc.robot.subsystems.Grip;
 import frc.robot.subsystems.Lift;
@@ -41,6 +41,7 @@ public class Auto extends SequentialCommandGroup {
       //   new LiftUp(lift), new GripIn(grip), new  GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance),
       //   new LiftDown(lift), new GripOut(grip),new  GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance), new GoStraightThenTurn(drive, angle, distance),   )  ;
        }
+  }*/
   }
-
+}
 

@@ -35,6 +35,6 @@ public final class Constants {
     }
     public static final class TURN_CONST {
         public static final int
-        TURNTABLE_PWM = 1;
+        TURNTABLE_CAN = 7;
     }
 }
