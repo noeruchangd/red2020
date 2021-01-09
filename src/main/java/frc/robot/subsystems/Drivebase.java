@@ -36,7 +36,10 @@ public class Drivebase extends SubsystemBase {
 
   @Override
   public void periodic() {
-    drive(RobotContainer.stick.getRawAxis(1) * 0.3, RobotContainer.stick.getRawAxis(3) * 0.3);
+    double multiplier = RobotContainer.stick.getRawButton(8) ? 0.8 : 0.4;
+
+
+    drive(RobotContainer.stick.getRawAxis(1) * (multiplier + 0.05), RobotContainer.stick.getRawAxis(3) * multiplier);
   }
 }
 

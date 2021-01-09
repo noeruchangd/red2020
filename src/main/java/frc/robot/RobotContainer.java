@@ -17,6 +17,7 @@ import frc.robot.commands.StraightDrive;
 import frc.robot.subsystems.Drivebase;
 import frc.robot.subsystems.Lift;
 import frc.robot.subsystems.Grip;
+import frc.robot.subsystems.Turntable;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj.Timer;
 
@@ -31,6 +32,7 @@ public class RobotContainer {
   private final Drivebase driver = new Drivebase(); // vscode ngu bo me
   private final Lift lift = new Lift();
   private final Grip grip = new Grip();
+  private final Turntable turntable = new Turntable();
  // private final StraightDrive sdrive = new StraightDrive(driver);
   private final Drivebase bucac = new Drivebase();
   private final Lift bulon = new Lift();

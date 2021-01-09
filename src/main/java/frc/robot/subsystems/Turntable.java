@@ -27,7 +27,15 @@ public class Turntable extends SubsystemBase {
     };
   @Override
   public void periodic() {
-      cock(RobotContainer.stick.getRawAxis(0) * 0.5);
+    if (RobotContainer.stick.getRawButton(2)) {
+      cock(0.8);
+   }
+    else if (RobotContainer.stick.getRawButton(4)) {
+      cock(-0.8);
+   }
+   else if ((RobotContainer.stick.getRawButton(2) & RobotContainer.stick.getRawButton(4)) == false) {
+ cock(0);
+   }
   }
 }
 
