@@ -14,16 +14,17 @@ import frc.robot.subsystems.Drivebase;
 
 public class StraightDrive extends CommandBase {
   private static Drivebase db;
+  private double v;
   /**
    * Creates a new StraightDrive.
  *
    */
-  public StraightDrive(Drivebase driver){
+  public StraightDrive(Drivebase driver, double speed){
     
     addRequirements(driver);
     // Use addRequirements() here to declare subsystem dependencies.
-    db = driver; // bu cac
-
+    db = driver;
+    v=speed;
   }
 
   // Called when the command is initially scheduled.
@@ -31,11 +32,7 @@ public class StraightDrive extends CommandBase {
   public void initialize() {
     
      db.drive(-0.42, -0.4);
-     Timer.delay(4.7);
-     db.drive(-0.42, 0.4);
-     Timer.delay(0.55);
-     db.drive(-0.42, -0.4);
-     Timer.delay(4);
+     Timer.delay(v);
      db.drive(0, 0);
   }
 

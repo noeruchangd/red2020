@@ -8,17 +8,18 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
-import frc.robot.subsystems.*;
+import frc.robot.subsystems.Drivebase;
+
 // NOTE:  Consider using this command inline, rather than writing a subclass.  For more
 // information, see:
 // https://docs.wpilib.org/en/latest/docs/software/commandbased/convenience-features.html
-public class TurnThenGoStraight extends SequentialCommandGroup {
+public class TurnLeftThenStraight extends SequentialCommandGroup {
   /**
-   * Creates a new TurnThenGoStraight.
+   * Creates a new TurnLeftThenStraight.
    */
-  public TurnThenGoStraight(Drivebase Ishar, double angle, double distance) {
+  public TurnLeftThenStraight(Drivebase drive, double speed, double Angle) {
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
-    super();
+    super(new TurnLeft(drive, Angle), new StraightDrive(drive, speed));
   }
 }

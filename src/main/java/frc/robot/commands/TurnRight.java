@@ -11,14 +11,14 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Drivebase;
 
-public class Turn extends CommandBase {
+public class TurnRight extends CommandBase {
   private static Drivebase turn;
   private double angle;
   private static final double DegsPerSec = 1;
   /**
    * Creates a new Turn.
    */
-  public Turn(Drivebase quay, double a) {
+  public TurnRight(Drivebase quay, double a) {
     addRequirements(quay);
     turn = quay;
     angle = a;
