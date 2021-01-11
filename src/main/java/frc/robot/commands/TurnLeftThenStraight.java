@@ -17,7 +17,7 @@ public class TurnLeftThenStraight extends SequentialCommandGroup {
   /**
    * Creates a new TurnLeftThenStraight.
    */
-  public TurnLeftThenStraight(Drivebase drive, double speed, double Angle) {
+  public TurnLeftThenStraight(Drivebase drive, double Angle, double speed) {
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
     super(new TurnLeft(drive, Angle), new StraightDrive(drive, speed));
