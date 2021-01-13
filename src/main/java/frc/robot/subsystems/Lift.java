@@ -9,12 +9,10 @@ package frc.robot.subsystems;
 
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
-import frc.robot.Robot;
+
 import static frc.robot.Constants.LIFT_CONST.*;
 
 
@@ -29,11 +27,11 @@ public class Lift extends SubsystemBase {
   }; 
   @Override
   public void periodic() {
-   if (RobotContainer.stick.getRawButton(2)){
-     elevate(-0.4);
+   if (RobotContainer.stick.getRawButton(1)){
+     elevate(-0.6);
     }
-   if (RobotContainer.stick.getRawButton(4)) {
-     elevate(0.4);
+   if (RobotContainer.stick.getRawButton(3)) {
+     elevate(0.6);
   }
   else if ((RobotContainer.stick.getRawButton(1) & RobotContainer.stick.getRawButton(1)) == false) 
 elevate(0);

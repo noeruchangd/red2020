@@ -29,10 +29,13 @@ public class Test extends CommandBase {
   public void initialize() {
     test.drive(-0.6, 0.6);
     Timer.delay(a);
-    test.drive(-0.42, -0.4);
+    test.drive(-0.52, -0.5);
     Timer.delay(b);
-    test.drive(0.6, -0.6);
+    test.drive(0.4, -0.4);
     Timer.delay(c);
+    test.drive(-0.52, -0.5);
+    Timer.delay(7);
+    
   }
 
   // Called every time the scheduler runs while the command is scheduled.

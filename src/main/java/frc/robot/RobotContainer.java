@@ -14,7 +14,6 @@ import frc.robot.commands.Auto;
 import frc.robot.subsystems.Drivebase;
 import frc.robot.subsystems.Lift;
 import frc.robot.subsystems.Grip;
-import frc.robot.subsystems.Turntable;
 import edu.wpi.first.wpilibj2.command.Command;
 
 
@@ -32,7 +31,7 @@ public class RobotContainer {
  // private final StraightDrive sdrive = new StraightDrive(driver);
   private final Grip kep = new Grip();
   private final Auto mAuto = new Auto(driver, lift, kep);
-  public static Joystick stick = new Joystick(1);
+  public static Joystick stick = new Joystick(0);
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.

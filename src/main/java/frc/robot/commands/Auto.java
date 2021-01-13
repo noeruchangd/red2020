@@ -25,7 +25,7 @@ public class Auto extends SequentialCommandGroup {
    * Creates a new Auto.
    */
   public Auto(Drivebase drive, Lift lift, Grip grip) {
-    super(new Test(drive, 0.25, 8, 0.5) );
+    super(new Test(drive, 0.25, 6.5, 0.5) );
       
    
       
