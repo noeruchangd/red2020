@@ -18,18 +18,18 @@ public class TurnRight extends CommandBase {
   /**
    * Creates a new Turn.
    */
-  public TurnRight(Drivebase quay, double a) {
+  public TurnRight(Drivebase quay) {
     addRequirements(quay);
     turn = quay;
-    angle = a;
+    
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    turn.drive(0.6, -0.6);
-    Timer.delay(angle / DegsPerSec);
+    turn.drive(-0.6, 0.6);
+    Timer.delay(0.25);
     turn.drive(0, 0);
   }
 

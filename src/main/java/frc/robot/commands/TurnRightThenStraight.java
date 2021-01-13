@@ -19,6 +19,6 @@ public class TurnRightThenStraight extends SequentialCommandGroup {
   public TurnRightThenStraight(Drivebase Ishar, double angle, double speed) {
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
-    super(new TurnRight(Ishar, angle), new StraightDrive(Ishar, speed));
+    //super(new TurnRight(Ishar, angle), new StraightDrive(Ishar, speed));
   }
 }
