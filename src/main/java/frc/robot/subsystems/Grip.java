@@ -7,14 +7,14 @@
 
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
-import edu.wpi.first.wpilibj.Timer;
+
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
-import frc.robot.Robot;
-import static frc.robot.Constants.CLAMP_CONST.*;
+
+
 
 public class Grip extends SubsystemBase {
   public WPI_VictorSPX clampMotor = new WPI_VictorSPX(06);

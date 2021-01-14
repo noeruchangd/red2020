@@ -14,26 +14,27 @@ import frc.robot.subsystems.Drivebase;
 
 public class StraightDrive extends CommandBase {
   private static Drivebase db;
-  private double v;
+  
   /**
    * Creates a new StraightDrive.
  *
    */
-  public StraightDrive(Drivebase driver, double speed){
+  public StraightDrive(Drivebase driver){
     
     addRequirements(driver);
     // Use addRequirements() here to declare subsystem dependencies.
     db = driver;
-    v=speed;
+    
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
     
-     db.drive(-0.42, -0.4);
-     Timer.delay(v);
+     db.drive(-0.45,-0.42);;
+     Timer.delay(8);
      db.drive(0, 0);
+     Timer.delay(0.01);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
