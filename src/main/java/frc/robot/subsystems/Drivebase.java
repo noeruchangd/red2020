@@ -42,4 +42,3 @@ public class Drivebase extends SubsystemBase {
     drive(RobotContainer.stick.getRawAxis(1) * (multiplier + 0.05), RobotContainer.stick.getRawAxis(3) * multiplier);
   }
 }
-
