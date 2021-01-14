@@ -14,7 +14,7 @@ import frc.robot.subsystems.Drivebase;
 
 public class StraightDrive extends CommandBase {
   private static Drivebase db;
-  private double v;
+  
   /**
    * Creates a new StraightDrive.
  *

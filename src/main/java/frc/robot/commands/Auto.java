@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.subsystems.Drivebase;
 import frc.robot.subsystems.Grip;
 import frc.robot.subsystems.Lift;
-import frc.robot.commands.GripOut;
+
 
 
 // NOTE:  Consider using this command inline, rather than writing a subclass.  For more
@@ -25,9 +25,8 @@ public class Auto extends SequentialCommandGroup {
    * Creates a new Auto.
    */
   public Auto(Drivebase drive, Lift lift, Grip grip) {
-    super(new Test(drive, 0.25, 6.5, 0.5) );
-      
-   
+   super(new Test(drive, 0.3, 4.7, 0.4) );
+    
       
     
     // Add your commands in the super() call, e.g.

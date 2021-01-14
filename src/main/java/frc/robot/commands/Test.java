@@ -34,7 +34,11 @@ public class Test extends CommandBase {
     test.drive(0.4, -0.4);
     Timer.delay(c);
     test.drive(-0.52, -0.5);
-    Timer.delay(7);
+    Timer.delay(3.7);
+    test.drive(0.4,-0.4);
+    Timer.delay(0.5);
+    test.drive(-0.72, -0.7);
+    Timer.delay(4);
     
   }
 
