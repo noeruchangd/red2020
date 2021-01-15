@@ -13,12 +13,13 @@ import frc.robot.subsystems.Grip;
 
 public class GripOut extends CommandBase {
   private static Grip Gr;
+  private double D;
   
   private double Distance;
   /**
    * Creates a new GripOut.
    */
-  public GripOut(Grip b, double D) {
+  public GripOut(Grip b) {
     addRequirements(b);
     Gr = b;
     Distance = D;
